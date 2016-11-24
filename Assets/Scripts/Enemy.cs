@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
 	Transform targetPathNode;
 	int pathNodeIndex = 0;
 
-	float speed = 5f;
+	float speed = 1f;
 
 	public float health = 100f;
 
