@@ -4,18 +4,40 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
 	GameObject pathOn;
-
 	Transform targetPathNode;
 	int pathNodeIndex = 0;
+    public string thisObjectname;
+	float speed;
 
-	float speed = 1f;
+	public float health;
 
-	public float health = 100f;
+	public int moneyValue;
 
-	public int moneyValue = 1;
+    // Use this for initialization
+    void EnemyType()
+    {
+        if(thisObjectname == "Soldier")
+        {
+            health = 50f;
+            speed = 2f;
+            moneyValue = 1;
+        }
+        if(thisObjectname == "Knight")
+        {
+            health = 100f;
+            speed = 1f;
+            moneyValue = 2;
+        }
+        if(thisObjectname == "Giant")
+        {
+            health = 300f;
+            speed = 0.5f;
+            moneyValue = 20;
+        }
+        //NOTE: Add in the rest
+    }
 
-	// Use this for initialization
-	void Start () {
+    void Start () {
 		pathOn = GameObject.Find("Path");
 	}
 

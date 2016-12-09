@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tower : MonoBehaviour {
+public class TowerBehavior : MonoBehaviour {
 
 	Transform turretTransform;
 
