@@ -13,4 +13,8 @@ public class scene_manager : MonoBehaviour {
     {
         SceneManager.LoadScene("Title");
     }
+    public void gameoversceen()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
 }

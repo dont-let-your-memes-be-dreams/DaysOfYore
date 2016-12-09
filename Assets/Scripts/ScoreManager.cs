@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour {
 	public void GameOver() {
 		Debug.Log("Game Over");
 		// TODO: Send the player to a game-over screen instead!
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene("GameOver");
 	}
 
 	void Update() {
