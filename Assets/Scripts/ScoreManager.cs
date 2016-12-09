@@ -8,8 +8,8 @@ public class ScoreManager : MonoBehaviour {
 	public int lives = 20;
 	public int money = 100;
 
-	public Text moneyText;
-	public Text livesText;
+	public Text moneyCount;
+	public Text livesCount;
 
 	public void LoseLife(int l = 1) {
 		lives -= l;
@@ -26,8 +26,8 @@ public class ScoreManager : MonoBehaviour {
 
 	void Update() {
 		// FIXME: This doesn't actually need to update the text every frame.
-		moneyText.text = "Money: $" + money.ToString();
-		livesText.text = "Lives: "  + lives.ToString();
+		moneyCount.text = "Money: $" + money.ToString();
+		livesCount.text = "Lives: "  + lives.ToString();
 
 
 	}

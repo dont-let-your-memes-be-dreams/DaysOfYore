@@ -70,9 +70,9 @@ public class Enemy : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
-	public void TakeDamage(float damage) 
+	public void TakeDamage(float Damage) 
 	{
-		health -= damage;
+		health -= Damage;
 		if(health <= 0) 
 		{
 			Die();
