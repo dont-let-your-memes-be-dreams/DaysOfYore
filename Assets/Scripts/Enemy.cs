@@ -6,41 +6,18 @@ public class Enemy : MonoBehaviour {
 	GameObject pathOn;
 	Transform targetPathNode;
 	int pathNodeIndex = 0;
-    public string thisObjectname;
-	float speed;
+
+    public float speed;
 
 	public float health;
 
 	public int moneyValue;
 
     // Use this for initialization
-    void EnemyType()
-    {
-        if(thisObjectname == "Soldier")
-        {
-            health = 50f;
-            speed = 2f;
-            moneyValue = 1;
-        }
-        if(thisObjectname == "Knight")
-        {
-            health = 100f;
-            speed = 1f;
-            moneyValue = 2;
-        }
-        if(thisObjectname == "Giant")
-        {
-            health = 300f;
-            speed = 0.5f;
-            moneyValue = 20;
-        }
-        //NOTE: Add in the rest
-    }
 
     void Start () {
 		pathOn = GameObject.Find("Path");
 	}
-
 	void GetNextPathNode() {
 		if(pathNodeIndex < pathOn.transform.childCount) 
 		{
@@ -69,9 +46,7 @@ public class Enemy : MonoBehaviour {
 		}
 
 		Vector3 direction = targetPathNode.position - this.transform.localPosition;
-
 		float distThisFrame = speed * Time.deltaTime;
-
 		if(direction.magnitude <= distThisFrame) 
 		{
 			// We reached the node
